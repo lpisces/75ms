@@ -29,6 +29,11 @@ gem 'jquery-rails'
 
 gem 'thin'
 gem 'haml'
+gem 'bcrypt-ruby', '3.0.1'
+
+group :development do
+  gem 'annotate', '~> 2.4.1.beta'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

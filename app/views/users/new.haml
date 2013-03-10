@@ -1,0 +1,47 @@
+.span12
+  %ul.breadcrumb
+    %li
+      %a{:href => '/'} 首页
+      %span.divider /
+    %li
+      %a{:href => '/users'} 用户
+      %span.divider /
+    %li.active 注册
+
+.span12
+  .span9
+    = form_for @user, :html => {:class => 'form-horizontal'} do |f|
+      = render 'shared/error_messages'
+      .control-group
+        = f.label :name, :'用户名', :class => 'control-label'
+        .controls
+          = f.text_field :name
+          %span.help-inline 
+          %span.help-block
+
+      .control-group
+        = f.label :email, :'Email', :class => 'control-label'
+        .controls
+          = f.text_field :email
+          %span.help-inline 
+          %span.help-block
+
+      .control-group
+        = f.label :password, :'密码', :class => 'control-label'
+        .controls
+          = f.text_field :password
+          %span.help-inline 
+          %span.help-block
+
+      .control-group
+        = f.label :password_confirmation, :'确认密码', :class => 'control-label'
+        .controls
+          = f.text_field :password_confirmation
+          %span.help-inline 
+          %span.help-block
+
+      .control-group
+        .controls
+          %button.btn.btn-primary.btn-mini{:type => 'submit'} 注册
+
+  .span3
